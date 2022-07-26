@@ -3,17 +3,13 @@
  */
 package demo
 
-import spock.lang.Specification
-
-class AppTest extends Specification {
-    def "application has a greeting"() {
-        setup:
+class AppTest extends GroovyTestCase {
+    void testGreeting() {
         def app = new App()
 
-        when:
         def result = app.greeting
 
-        then:
-        result != null
+        assert result != null
+        assert 1==2
     }
 }
